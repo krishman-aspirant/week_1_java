@@ -39,6 +39,6 @@
 
 **There are two important concepts in modular program development: interfaces and specifications.**
 
-1. Interface: It is a description of the parts of a component that are visible to other program components.
+1. **Interface**: It is a description of the parts of a component that are visible to other program components.
 
-1. Specification: It is a description of the behavior of a component, as observable through its interface.
+1. **Specification**: It is a description of the behavior of a component, as observable through its interface.
