@@ -49,7 +49,7 @@ public class Main {
 - All classes that implement an interface are subtypes of that interface.
 - Subtyping is more about type compatibility than code sharing.
 
-## Example
+## Example 1
 ```java
 class Animal {
     void makeSound() {
@@ -70,6 +70,80 @@ public class Main {
     }
 }
 ```
+---
+## Example 2 : Interface-based Subtyping
+```java
+interface Shape {
+    double area();
+}
+
+class Circle implements Shape {     // Circle is a subtype of Shape
+    double radius;
+
+    Circle(double r) {
+        radius = r;
+    }
+
+    public double area() {
+        return Math.PI * radius * radius;
+    }
+}
+
+class Rectangle implements Shape {  // Rectangle is also a subtype of Shape
+    double width, height;
+
+    Rectangle(double w, double h) {
+        width = w;
+        height = h;
+    }
+
+    public double area() {
+        return width * height;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape s1 = new Circle(5);      // Circle used as Shape
+        Shape s2 = new Rectangle(4, 6); // Rectangle used as Shape
+
+        System.out.println(s1.area());  // works!
+        System.out.println(s2.area());  // works!
+    }
+}
+```
+--- 
+## Example 3 : Class Hierarchy Subtyping
+```java
+class Vehicle {
+    void start() {
+        System.out.println("Vehicle starts");
+    }
+}
+
+class Car extends Vehicle {
+    void openTrunk() {
+        System.out.println("Trunk opened");
+    }
+}
+
+class Bike extends Vehicle {
+    void kickStart() {
+        System.out.println("Bike kick-started");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Vehicle v1 = new Car();   // Car is a subtype of Vehicle
+        Vehicle v2 = new Bike();  // Bike is also a subtype of Vehicle
+
+        v1.start();   // valid
+        v2.start();   // valid
+    }
+}
+```
+
 
 # 3.Key Differences
 | Aspect           | Inheritance                                 | Subtyping                                                              |
