@@ -70,6 +70,13 @@ public class Main {
     }
 }
 ```
+```mermaid
+flowchart LR
+    id1[Animal]--->
+    id2[Dog]
+```
+> Animal is Supertype
+> Dog is Subtype
 ---
 ## Example 2 : Interface-based Subtyping
 ```java
