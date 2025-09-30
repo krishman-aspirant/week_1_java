@@ -76,6 +76,7 @@ flowchart LR
     id2[Dog]
 ```
 > Animal is Supertype
+
 > Dog is Subtype
 ---
 ## Example 2 : Interface-based Subtyping
